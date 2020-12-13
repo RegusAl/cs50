@@ -8,6 +8,11 @@
 html {
   font-size: 62.5%;
   font-family: "Roboto", sans-serif;
+  overflow: hidden;
+}
+
+#title {
+  color: black;
 }
 
 h1 {
@@ -87,6 +92,7 @@ h1 {
 
 .menu nav li:hover {
   opacity: 0.5;
+  text-decoration: underline;
 }
 
 .menu nav a {
@@ -97,7 +103,7 @@ h1 {
 }
 
 main {
-  width: 90%;
+  width: 90vw;
   margin-left: 15vw;
   background: #fdfdfd;
   -webkit-transition: 1s;
@@ -112,6 +118,144 @@ main .content {
 }
 
 main h1 {
-  font-size: 7rem;
+  font-size: 10rem;
+  margin-top: 20%;
+  padding-bottom: 5rem;
+}
+
+main h2 {
+  font-size: 5rem;
+  padding-bottom: 5rem;
+}
+
+main h3 {
+  font-size: 3rem;
+}
+
+main h4 {
+  font-size: 2rem;
+}
+
+main h5 {
+  font-size: 1rem;
+}
+
+main p {
+  font-size: 2.4rem;
+  line-height: 1rem;
+}
+
+main a {
+  text-decoration: none;
+  color: #c80a0a;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 100rem;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: #c80a0a;
+  font-weight: bold;
+  font-size: 18px;
+  -webkit-transition: 0.6s ease;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Caption text */
+.text {
+  color: #c80a0a;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  -webkit-transition: background-color 0.6s ease;
+  transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
 }
 /*# sourceMappingURL=style.css.map */
