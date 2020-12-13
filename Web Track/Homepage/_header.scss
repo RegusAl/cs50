@@ -1,39 +1,46 @@
-nav {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #333;
-  float: right;
-}
-
-ul.topnav li {
-  float: left;
-}
-
-ul.topnav li a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-
-ul.topnav li a:hover:not(.active) {
-  background-color: #111;
-}
-
-ul.topnav li a.active {
-  background-color: #4caf50;
-}
-
-ul.topnav li.right {
-  float: right;
-}
-
-@media screen and (max-width: 600px) {
-  ul.topnav li.right,
-  ul.topnav li {
-    float: none;
+.menu {
+  position: fixed;
+  height: 100vh;
+  background: black;
+  width: 10vw;
+  transition: 1s;
+  #active {
+    color: rgb(200, 10, 10);
+  }
+  &:hover {
+    width: 30vw;
+  }
+  &:hover ~ main {
+    transform: perspective(80vw) rotateY(10deg) translateX(35vw) scaleY(1.2);
+  }
+  &:hover nav {
+    left: 20%;
+  }
+  nav {
+    position: absolute;
+    margin-top: 50%;
+    left: -100rem;
+    transition: 0.5s;
+    h1 {
+      padding-bottom: 2rem;
+    }
+    ul {
+      color: white;
+      text-transform: uppercase;
+      list-style-type: none;
+    }
+    li {
+      line-height: 2.5rem;
+      letter-spacing: 0.3em;
+      &:hover {
+        opacity: 0.5;
+      }
+    }
+    a {
+      font-size: 3rem;
+      text-decoration: none;
+      color: white;
+      font-weight: 600;
+    }
   }
 }

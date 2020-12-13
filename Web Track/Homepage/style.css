@@ -1,40 +1,113 @@
-nav {
-  list-style-type: none;
+* {
   margin: 0;
   padding: 0;
-  overflow: hidden;
-  background-color: #333;
-  float: right;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
-ul.topnav li {
-  float: left;
+html {
+  font-size: 62.5%;
 }
 
-ul.topnav li a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
+h1 {
+  font-size: 4rem;
 }
 
-ul.topnav li a:hover:not(.active) {
-  background-color: #111;
-}
-
-ul.topnav li a.active {
-  background-color: #4caf50;
-}
-
-ul.topnav li.right {
-  float: right;
-}
-
-@media screen and (max-width: 600px) {
-  ul.topnav li.right,
-  ul.topnav li {
-    float: none;
+@media screen and (max-width: 100rem) {
+  .menu nav h1 {
+    font-size: 3rem;
   }
+  .menu nav li {
+    line-height: 5rem;
+  }
+}
+
+@media screen and (max-width: 70rem) {
+  html {
+    font-size: 50%;
+  }
+  .menu {
+    text-align: center;
+  }
+  .menu nav h1 {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 50rem) {
+  html {
+    font-size: 35%;
+  }
+}
+
+.menu {
+  position: fixed;
+  height: 100vh;
+  background: black;
+  width: 10vw;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.menu #active {
+  color: #c80a0a;
+}
+
+.menu:hover {
+  width: 30vw;
+}
+
+.menu:hover ~ main {
+  -webkit-transform: perspective(80vw) rotateY(10deg) translateX(35vw) scaleY(1.2);
+          transform: perspective(80vw) rotateY(10deg) translateX(35vw) scaleY(1.2);
+}
+
+.menu:hover nav {
+  left: 20%;
+}
+
+.menu nav {
+  position: absolute;
+  margin-top: 50%;
+  left: -100rem;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.menu nav h1 {
+  padding-bottom: 2rem;
+}
+
+.menu nav ul {
+  color: white;
+  text-transform: uppercase;
+  list-style-type: none;
+}
+
+.menu nav li {
+  line-height: 2.5rem;
+  letter-spacing: 0.3em;
+}
+
+.menu nav li:hover {
+  opacity: 0.5;
+}
+
+.menu nav a {
+  font-size: 3rem;
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+}
+
+main {
+  width: 90%;
+  margin-left: 10vw;
+  background: #fdfdfd;
+  -webkit-transition: 1s;
+  transition: 1s;
+  -webkit-transform-origin: left center;
+          transform-origin: left center;
+  color: #d2d2d0;
 }
 /*# sourceMappingURL=style.css.map */
