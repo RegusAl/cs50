@@ -129,6 +129,7 @@ main h2 {
 }
 
 main h3 {
+  padding: 4rem 0;
   font-size: 3rem;
 }
 
@@ -141,6 +142,7 @@ main h5 {
 }
 
 main p {
+  padding: 1rem 0;
   font-size: 2.4rem;
   line-height: 1rem;
 }
@@ -148,6 +150,20 @@ main p {
 main a {
   text-decoration: none;
   color: #c80a0a;
+}
+
+main ul {
+  list-style-type: none;
+}
+
+main ul li {
+  font-size: 2.4rem;
+  line-height: 3rem;
+  padding: 1rem;
+}
+
+main .btn {
+  color: black;
 }
 
 /* Slideshow container */
