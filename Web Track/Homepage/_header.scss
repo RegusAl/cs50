@@ -10,9 +10,6 @@
   &:hover {
     width: 30vw;
   }
-  &:hover ~ main {
-    transform: perspective(80vw) rotateY(10deg) translateX(35vw) scaleY(1.2);
-  }
   &:hover nav {
     left: 20%;
   }
@@ -34,6 +31,7 @@
       letter-spacing: 0.3em;
       &:hover {
         opacity: 0.5;
+        text-decoration: underline;
       }
     }
     a {
